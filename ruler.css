@@ -1,0 +1,34 @@
+body {
+  background-color: rgb(69, 69, 69);
+}
+
+.ruler {
+  margin: 5%;
+  display: flex;
+  justify-content: space-around;
+  border: 5.5555555556px solid #e69500;
+  border-radius: 2%;
+  width: 1000px;
+  height: 100px;
+  background-image: linear-gradient(orange 68%, #e69500 71% 74%, orange 75% 100%);
+}
+.ruler .lg {
+  height: 40px;
+  width: 3px;
+  background-color: rgb(69, 69, 69);
+  border-radius: 100%;
+  line-height: 6.5em;
+  position: relative;
+}
+.ruler .lg .md {
+  height: 30px;
+  width: 3px;
+  background-color: rgb(69, 69, 69);
+  border-radius: 100%;
+  transform: translateX(45.4545454545px);
+  display: flex;
+}
+.ruler .lg span {
+  position: absolute;
+  left: -0.15em;
+}/*# sourceMappingURL=ruler.css.map */
