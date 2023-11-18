@@ -1,50 +1,54 @@
 $colorLight: orange;
 $colorDark: rgb(69, 69, 69);
-$width: 1000px;
+$width: 880px;
 $height:100px;
 
-@mixin small {
-    height: 0.2 * $height;
-    width: 0.03 * $height;
-    background-color: red;
-    border-radius: 100%;
-    transform: translateX(($width / 22) / 4);
-}
+$widthMl:7px;
 
 body {
     background-color: $colorDark;
 }
+
 .ruler {
     margin: 5%;
-    display: flex;
-    justify-content: space-around;
+    position: relative;
     border:calc($height / 18) solid darken($colorLight, 5%);
     border-radius: 2%;
     width: $width;
     height: $height;
-    background-image: linear-gradient($colorLight 68%, darken($colorLight, 5%) 71% 74%, $colorLight 75% 100%);
-
-    .lg {
-        height: 0.4 * $height;
-        width: 0.03 * $height;
-        background-color: $colorDark;
-        border-radius: 100%;
-        line-height: 6.5em;
-        position: relative;
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient($colorLight 0 70%, darken($colorLight, 5%) 75% 80%, $colorLight 80% 100%);
     
-        .md {
-            height: 0.3 * $height;
+        .fon {
+            position: absolute;
+            width: $width;
+            height: $height * 0.2;
+            background-image: repeating-linear-gradient(to right, $colorLight 0 $widthMl, $colorDark $widthMl ($widthMl + 1));
+        }
+
+        .lg {
+            height: 0.4 * $height;
             width: 0.03 * $height;
             background-color: $colorDark;
             border-radius: 100%;
-            transform: translateX($width / 22);
-            display: flex;
-        }
+            line-height: 6.5em;
+            position: relative;
+        
+            .md {
+                height: 0.3 * $height;
+                width: 0.03 * $height;
+                background-color: $colorDark;
+                border-radius: 100%;
+                transform: translateX($width / 22);
+                display: flex;
+            }
 
-        span {
-            position: absolute;
-            left: -0.15em;
-        }
+            span {
+                position: absolute;
+                left: -0.20em;
+                font-size: $height * 0.2;
+            }
     }
 }
 
