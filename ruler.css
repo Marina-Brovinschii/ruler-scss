@@ -4,13 +4,20 @@ body {
 
 .ruler {
   margin: 5%;
-  display: flex;
-  justify-content: space-around;
+  position: relative;
   border: 5.5555555556px solid #e69500;
   border-radius: 2%;
-  width: 1000px;
+  width: 880px;
   height: 100px;
-  background-image: linear-gradient(orange 68%, #e69500 71% 74%, orange 75% 100%);
+  display: flex;
+  justify-content: space-around;
+  background-image: linear-gradient(orange 0 70%, #e69500 75% 80%, orange 80% 100%);
+}
+.ruler .fon {
+  position: absolute;
+  width: 880px;
+  height: 20px;
+  background-image: repeating-linear-gradient(to right, orange 0 7px, rgb(69, 69, 69) 7px 8px);
 }
 .ruler .lg {
   height: 40px;
@@ -25,10 +32,11 @@ body {
   width: 3px;
   background-color: rgb(69, 69, 69);
   border-radius: 100%;
-  transform: translateX(45.4545454545px);
+  transform: translateX(40px);
   display: flex;
 }
 .ruler .lg span {
   position: absolute;
-  left: -0.15em;
+  left: -0.2em;
+  font-size: 20px;
 }/*# sourceMappingURL=ruler.css.map */
